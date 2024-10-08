@@ -1,0 +1,73 @@
+.documentation {
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 20px auto; /* Center the content */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.documentation h1 {
+    font-size: 2.5em; /* Larger title font */
+    color: #333; /* Dark text color */
+    margin-bottom: 20px; /* Space below title */
+}
+
+.documentation h2 {
+    font-size: 1.8em; /* Subsection title font size */
+    color: #007bff; /* Blue color for subsection titles */
+    margin-top: 30px; /* Space above subsection titles */
+}
+
+.documentation p {
+    font-size: 1.1em; /* Body text size */
+    color: #555; /* Slightly darker text for readability */
+}
+
+pre {
+    background-color: #272b30; /* Dark background for code blocks */
+    color: #f8f8f2; /* Light text color for code */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners for code blocks */
+    overflow: auto; /* Allow scrolling if the code is too long */
+    white-space: pre-wrap; /* Allow wrapping */
+}
+
+footer {
+    margin-top: 40px; /* Space above the footer */
+    text-align: center; /* Center align the footer content */
+}
+
+footer a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.copy-icon {
+    cursor: pointer; /* Change cursor to pointer */
+    margin-left: 8px; /* Space between code and icon */
+    color: #b06ce7; /* Icon color */
+}
+
+.copy-icon:hover {
+    color: #0056b3; /* Darker color on hover */
+}
+
+.copy-feedback {
+    margin-left: 8px; /* Space between icon and feedback */
+    color: green; /* Color for the feedback message */
+    font-size: 0.9em; /* Smaller font size */
+    opacity: 0.7; /* Slightly transparent */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+
+.copied {
+    color: green; /* Color when the code is copied */
+    font-weight: bold; /* Bold text to emphasize that it's copied */
+    transition: color 0.3s ease; /* Smooth color transition */
+}

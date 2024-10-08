@@ -1,0 +1,209 @@
+/* Full-page background */
+.app-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #eceff1; /* Change this to any color you prefer */
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Centered container */
+.app-container {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Title styling */
+.app-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input and Button styling */
+.converter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.language-select,
+.number-input,
+.convert-button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.language-select {
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+.number-input {
+  border: 1px solid #6e8efb;
+}
+
+.convert-button {
+  background-color: #6e8efb;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.convert-button:hover {
+  background-color: #a777e3;
+}
+
+/* Output styling */
+.output {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #6e8efb;
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  padding: 15px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.output-label {
+  color: #333;
+}
+
+.output-text {
+  color: #a777e3;
+  margin-left: 8px;
+}
+
+/* Action buttons container */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+/* Individual action button styling */
+.small-button {
+  background-color: #6e8efb;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 5px 0;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.small-button:hover {
+  background-color: #a777e3;
+}
+
+/* Email input styling */
+.email-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Bring to front */
+}
+
+.email-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.share-button,
+.cancel-button {
+  background-color: #6e8efb;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 5px 0;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.share-button:hover,
+.cancel-button:hover {
+  background-color: #a777e3;
+}
+
+
+/* Print styles */
+@media print {
+  body {
+    -webkit-print-color-adjust: exact; /* For Chrome to print background colors */
+    color: #000; /* Ensure text is printed in black */
+  }
+
+  .app-wrapper {
+    display: block; /* Stack elements in the print view */
+    justify-content: normal; /* Remove centering for print */
+    align-items: normal;
+    min-height: auto; /* Remove full height for print */
+    background-color: transparent; /* Remove background color */
+    padding: 0; /* Remove padding */
+  }
+
+  .app-container {
+    width: auto; /* Use full width for print */
+    box-shadow: none; /* Remove shadow for print */
+    border-radius: 0; /* Remove rounded corners */
+    padding: 20px; /* Adjust padding for print */
+  }
+
+  /* Hide any elements that are not needed in print */
+  .action-buttons {
+    display: none; /* Hide action buttons */
+  }
+}
+
+@media print {
+  #printableArea {
+      page-break-after: always; /* Ensures it breaks after the printable area */
+      margin: 14px; /* Reset margins */
+      padding: 10px; /* Reset padding */
+      width: 100%; /* Ensure full width */
+      height: auto; /* Allow auto height */
+  }
+}
+
+
+.action-icons {
+  display: flex;
+  gap: 10px; /* Space between icons */
+}
+
+.icon {
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-size: 24px; /* Icon size */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.icon:hover {
+  color: #007bff; /* Change color on hover */
+}
