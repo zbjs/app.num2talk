@@ -17,6 +17,7 @@ import OutputDisplay from './OutputDisplay';
 import EmailPopup from './EmailPopup';
 import Canvas from './Canvas';
 import '../App.css';
+
 const languageMap = {
     English: num2English,
     Hindi: num2Hindi,
@@ -46,8 +47,8 @@ const Home = () => {
 
     const handleCopy = () => {
         navigator.clipboard.writeText(output);
-        setCopyMessage('Copied to clipboard!'); // Set the copy message
-        setTimeout(() => setCopyMessage(''), 2000); // Clear the message after 2 seconds
+        setCopyMessage('Copied to clipboard!');
+        setTimeout(() => setCopyMessage(''), 2000);
     };
 
     const handlePrint = () => {
@@ -64,9 +65,9 @@ const Home = () => {
     const handleSaveImage = () => {
         const canvas = document.querySelector('canvas');
         const link = document.createElement('a');
-        link.download = 'number-conversion.png'; 
-        link.href = canvas.toDataURL(); 
-        link.click(); 
+        link.download = 'number-conversion.png';
+        link.href = canvas.toDataURL();
+        link.click();
     };
 
     return (
@@ -90,7 +91,7 @@ const Home = () => {
                                 setShowEmailPopup={setShowEmailPopup}
                             />
                             <Canvas number={number} result={output} />
-                            {copyMessage && <div className="copy-message">{copyMessage}</div>} {/* Display copy message */}
+                            {copyMessage && <div className="copy-message">{copyMessage}</div>}
                         </div>
                     )}
                     {showEmailPopup && (
@@ -102,13 +103,6 @@ const Home = () => {
                         />
                     )}
                 </div>
-            </div>
-            <div className="footer">
-                
-                <a href="/docs">Docs</a>
-                <p>© 2023 Number Converter. All rights reserved.</p>
-                <a href="https://github.com/rohitkumarpanchal/num2talk" target="_blank" rel="noopener noreferrer"></a>
-                    <i className="fab fa-github"></i>
             </div>
         </div>
     );

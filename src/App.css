@@ -3,9 +3,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   background-color: #eceff1; /* Change this to any color you prefer */
   font-family: Arial, sans-serif;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav-item {
+  float: right;
+}
+
+.link-button {
+  display: block;
+  text-align: center;
+  padding: 10px 80px;
+  text-decoration: none;
 }
 
 /* Centered container */
